@@ -4,7 +4,8 @@ var shouldContinueExecuting = true;
 while (shouldContinueExecuting) 
 {
     Console.WriteLine("Digit the challenge solution:");
-    Console.WriteLine("1 - TwoSum");
+    Console.WriteLine("1 - Two sum");
+    Console.WriteLine("2 - Check if number has equal digit count and digit value");
 
     var option = int.Parse(Console.ReadLine()!.ToString());
     switch (option) 
@@ -12,6 +13,11 @@ while (shouldContinueExecuting)
         case 1:
             var twoSum = new TwoSum();
             twoSum.Calculate();
+            break;
+
+        case 2:
+            var checkIfNumberHasEqualDigitCountAndDigitValue = new CheckIfNumberHasEqualDigitCountAndDigitValue();
+            checkIfNumberHasEqualDigitCountAndDigitValue.Check();
             break;
 
         default:
