@@ -6,6 +6,7 @@ while (shouldContinueExecuting)
     Console.WriteLine("Digit the challenge solution:");
     Console.WriteLine("1 - Two sum");
     Console.WriteLine("2 - Check if number has equal digit count and digit value");
+    Console.WriteLine("3 - Optimal partition of string");
 
     var option = int.Parse(Console.ReadLine()!.ToString());
     switch (option) 
@@ -18,6 +19,11 @@ while (shouldContinueExecuting)
         case 2:
             var checkIfNumberHasEqualDigitCountAndDigitValue = new CheckIfNumberHasEqualDigitCountAndDigitValue();
             checkIfNumberHasEqualDigitCountAndDigitValue.Check();
+            break;
+
+        case 3:
+            var optimalPartitionOfString = new OptimalPartitionOfString();
+            optimalPartitionOfString.CalculateSubstringsAmout();
             break;
 
         default:
