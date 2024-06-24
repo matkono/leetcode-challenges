@@ -4,7 +4,7 @@
 // Link to challenge:https://leetcode.com/problems/optimal-partition-of-string/description/
 public class OptimalPartitionOfString
 {
-    private string _originalString { get; set; }
+    private string OriginalString { get; set; }
 
     public void CalculateSubstringsAmout() 
     {
@@ -13,7 +13,7 @@ public class OptimalPartitionOfString
         var hashSet = new HashSet<char>();
         var subStringAmount = 1;
 
-        foreach (var character in _originalString)
+        foreach (var character in OriginalString)
         {
             if (hashSet.Contains(character))
             {
@@ -23,12 +23,12 @@ public class OptimalPartitionOfString
             hashSet.Add(character);
         }
 
-        Console.WriteLine($"The substring amount of string {_originalString} is {subStringAmount}");
+        Console.WriteLine($"The substring amount of string {OriginalString} is {subStringAmount}");
     }
 
     public void GetInput()
     {
         Console.WriteLine("Digit the string to check: ");
-        _originalString = Console.ReadLine()!;
+        OriginalString = Console.ReadLine()!;
     }
 }

@@ -3,29 +3,29 @@
 // Link to challenge: https://leetcode.com/problems/two-sum/description/
 public class TwoSum
 {
-    private List<int> _numbers { get; set; } = new List<int>();
-    private List<int> _result { get; } = new List<int>();
-    private int _target { get; set; }
+    private List<int> Numbers { get; set; } = new List<int>();
+    private List<int> Result { get; } = new List<int>();
+    private int Target { get; set; }
 
     public void Calculate()
     {
         GetInput();
 
         var hashMap = new Dictionary<int, int>();
-        var numbers = _numbers.ToArray();
+        var numbers = Numbers.ToArray();
 
         for (int index = 0; index < numbers.Length; index++)
         {
-            var number = _numbers[index];
+            var number = Numbers[index];
             if (hashMap.ContainsKey(number))
             {
-                _result.Add(hashMap[number]);
-                _result.Add(index);
+                Result.Add(hashMap[number]);
+                Result.Add(index);
             }
             else
             {
-                if (!hashMap.ContainsKey(_target - number))
-                    hashMap.Add(_target - number, index);
+                if (!hashMap.ContainsKey(Target - number))
+                    hashMap.Add(Target - number, index);
             }
         }
 
@@ -35,19 +35,19 @@ public class TwoSum
     private void GetInput()
     {
         Console.WriteLine("Digit the target: ");
-        _target = int.Parse(Console.ReadLine()!.ToString());
+        Target = int.Parse(Console.ReadLine()!.ToString());
 
         Console.WriteLine("Digit the quantity numbers: ");
         var quantityNumbers = int.Parse(Console.ReadLine()!.ToString());
         for (var quantity = 1; quantity <= quantityNumbers; quantity++)
         {
             Console.WriteLine("Digit the number: ");
-            _numbers.Add(int.Parse(Console.ReadLine()!.ToString()));
+            Numbers.Add(int.Parse(Console.ReadLine()!.ToString()));
         }
     }
 
     private void PrintResult()
     {
-        Console.WriteLine($"The index of elements to sum {_target} are: {_result[0]} and {_result[1]}");
+        Console.WriteLine($"The index of elements to sum {Target} are: {Result[0]} and {Result[1]}");
     }
 }
