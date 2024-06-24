@@ -1,15 +1,16 @@
 ﻿using Resolved;
 
 var shouldContinueExecuting = true;
-while (shouldContinueExecuting) 
+while (shouldContinueExecuting)
 {
     Console.WriteLine("Digit the challenge solution:");
     Console.WriteLine("1 - Two sum");
     Console.WriteLine("2 - Check if number has equal digit count and digit value");
     Console.WriteLine("3 - Optimal partition of string");
+    Console.WriteLine("4 - Dijkstra algorithm");
 
     var option = int.Parse(Console.ReadLine()!.ToString());
-    switch (option) 
+    switch (option)
     {
         case 1:
             var twoSum = new TwoSum();
@@ -24,6 +25,11 @@ while (shouldContinueExecuting)
         case 3:
             var optimalPartitionOfString = new OptimalPartitionOfString();
             optimalPartitionOfString.CalculateSubstringsAmout();
+            break;
+
+        case 4:
+            var dijkstraAlgorithm = new DijkstraAlgorithm();
+            dijkstraAlgorithm.FindShortestPath();
             break;
 
         default:
