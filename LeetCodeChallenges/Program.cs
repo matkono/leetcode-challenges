@@ -9,6 +9,7 @@ while (shouldContinueExecuting)
     Console.WriteLine("3 - Optimal partition of string");
     Console.WriteLine("4 - Dijkstra algorithm");
     Console.WriteLine("5 - Toeplitz matrix");
+    Console.WriteLine("6 - Transpose matrix");
 
     var option = int.Parse(Console.ReadLine()!.ToString());
     switch (option)
@@ -36,6 +37,11 @@ while (shouldContinueExecuting)
         case 5:
             var toeplitzMatrix = new ToeplitzMatrix();
             toeplitzMatrix.Verify();
+            break;
+
+        case 6:
+            var transposeMatrix = new TransposeMatrix();
+            transposeMatrix.Execute();
             break;
 
         default:
