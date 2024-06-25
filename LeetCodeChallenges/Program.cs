@@ -8,6 +8,7 @@ while (shouldContinueExecuting)
     Console.WriteLine("2 - Check if number has equal digit count and digit value");
     Console.WriteLine("3 - Optimal partition of string");
     Console.WriteLine("4 - Dijkstra algorithm");
+    Console.WriteLine("5 - Toeplitz matrix");
 
     var option = int.Parse(Console.ReadLine()!.ToString());
     switch (option)
@@ -30,6 +31,11 @@ while (shouldContinueExecuting)
         case 4:
             var dijkstraAlgorithm = new DijkstraAlgorithm();
             dijkstraAlgorithm.FindShortestPath();
+            break;
+
+        case 5:
+            var toeplitzMatrix = new ToeplitzMatrix();
+            toeplitzMatrix.Verify();
             break;
 
         default:
